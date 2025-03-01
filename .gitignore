@@ -1,39 +1,8 @@
-# 📌 기본적으로 제외해야 할 시스템 파일들 (Mac)
-.DS_Store
-._*
-.Spotlight-V100
-.Trashes
-Thumbs.db
-
-# 📌 Node.js 관련 파일들
 node_modules/
-npm-debug.log*
-yarn-error.log
-package-lock.json
-yarn.lock
-
-# 📌 Webpack & Babel 빌드 폴더
 dist/
 .cache/
-.babelrc
-webpack.config.js
-
-# 📌 환경 변수 파일 (보안)
+.DS_Store
 .env
-.env.local
-.env.*.local
-
-# 📌 VSCode 설정 파일
 .vscode/
-
-# 📌 ESLint & Prettier 관련
-.eslintcache
-.prettier/
-
-# 📌 Log 파일들
-logs
+logs/
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*

@@ -1,8 +1,20 @@
-import "./style.scss"; // SASS 파일 불러오기
+import Router from "./router/Router.js";
+import Home from "./pages/Home.js";
+import About from "./pages/About.js";
+
+const routes = {
+  "/": Home,
+  "/about": About,
+  "/404": { render: () => "<h1>404 - 페이지를 찾을 수 없습니다.</h1>" },
+};
+
+const router = new Router(routes);
 
 document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("btn");
-  btn.addEventListener("click", () => {
-    alert("버튼이 클릭되었습니다!");
+  document.body.addEventListener("click", (e) => {
+    if (e.target.matches("[data-link]")) {
+      e.preventDefault();
+      router.navigate(e.target.href);
+    }
   });
 });
