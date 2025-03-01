@@ -19,7 +19,7 @@
 //   });
 // });
 
-
+import "./styles/main.scss";
 import Counter from "./components/Counter.js";
 
 document.addEventListener("DOMContentLoaded", () => {

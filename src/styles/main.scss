@@ -1,20 +1,23 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
+// Base (기본 설정)
+// @use "base/variables";
+// @use "base/reset";
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+@use "base/index"; // ✅ 한 번에 모든 기본 설정 가져옴!
+@use "base/reset";
 
-  a {
-    text-decoration: none;
-    color: blue;
-    font-size: 18px;
+// Layouts
+@use "layouts/grid";
 
-    &:hover {
-      color: red;
-    }
-  }
-}
+// Components (버튼, 카드 등)
+@use "components/button";
+
+// Pages (개별 페이지 스타일)
+// @use "pages/home";
+
+// Themes (다크모드, 라이트모드)
+@use "themes/light";
+@use "themes/dark";
+
+// Utils (믹스인, 헬퍼)
+@use "utils/mixins";
+@use "utils/helpers";

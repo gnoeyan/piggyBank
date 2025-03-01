@@ -5,7 +5,7 @@ const Counter = {
     return `
       <div>
         <h2>Count: <span id="count">${store.state.count}</span></h2>
-        <button id="increment">+1</button>
+        <button class="button" id="increment">+1</button>
         <button id="decrement">-1</button>
       </div>
     `;
